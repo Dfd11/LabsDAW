@@ -1,0 +1,41 @@
+#self-id-image {
+    width: 120px;
+    border-style: dashed;
+}
+
+.contact {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gen-section {
+
+    background-color: lightblue;
+    border-color:dodgerblue;
+    border-width: 2px;
+    border-style: solid;
+}
+.edu, .experiences{
+    padding: 10px;
+    font-weight: 10;
+    border-style: dotted;
+
+}
+h2 {
+    font-style:italic;
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+footer {
+    float:right;
+    background-color:navy;
+    color: oldlace;
+}
