@@ -68,7 +68,7 @@ $(document).ready(function() {
                 list[0].innerHTML = ''
                 data.forEach((e) => {
                     let div = $("<div>")
-                    div.append(`<p>${e.rating}<p/>`)
+                    div.append(`<p>Rating: ${e.rating}<p/>`)
                     let img = $("<img/>")
     
                     img.attr("src",e.images.fixed_height_still.url)
