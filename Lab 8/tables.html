@@ -72,7 +72,7 @@
 <script type="text/javascript">
 
 
-
+//Query that runs everytime the page is loaded, loads the list of reserved tables
 function tableQuery (){
   $.get("/api/tables",function(res){
     console.log("Tables",res)
@@ -92,6 +92,7 @@ function tableQuery (){
   })
 }
 
+//Query that runs everytime the page is loaded, loads the waitlist
 function waitlistQuery (){
   $.get("/api/waitlist",function(res){
     console.log("Waitlist",res)
@@ -111,6 +112,7 @@ function waitlistQuery (){
   })
 }
 
+//Runs only when the clearlist link is accesed, clears the html lists and clears the lists on the servers
 function clearList(){
   $.post("/api/clear",function(res){
     alert("Clearing...")
@@ -119,6 +121,7 @@ function clearList(){
   })
 }
 
+//looker and calling the queries
 $("#clear").on("click",clearList);
 tableQuery();
 waitlistQuery();

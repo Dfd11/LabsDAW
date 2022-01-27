@@ -39,6 +39,7 @@
 
 </body>
 <script type="text/javascript">
+  //Functionality to change the number of available pages in the home page
   $.get("/api/tables",function(res){
 
     $("#left-tables").text(`We only have ${5-res.length} tables! Book your seat before they all are gone!`)

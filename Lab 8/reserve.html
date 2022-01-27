@@ -84,8 +84,11 @@
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
+  //looker for the submit button to do the post of the data
   $("#add-btn").on("click", function(event){
     event.preventDefault();
+
+    //creates new object to send
     var newRes = {
       name : $("#reserve-name").val(),
       phone : $("#reserve-phone").val(),
@@ -93,12 +96,14 @@
       id : $("#reserve-unique-id").val()
     };
 
+    //does the post and waits for response of where the entry was added
     $.post("/api/tables", newRes)
     .then(function(data){
       console.log("res.html",data)
       alert(`Adding reservation to ${data[0].state}`)
     })
 
+    //cleans the input boxes
     $("#reserve-name").val(""),
     $("#reserve-phone").val(""),
     $("#reserve-email").val(""),
